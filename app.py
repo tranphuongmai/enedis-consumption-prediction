@@ -1,6 +1,5 @@
 import streamlit as st
-from eda import bar_line, season_hol, corr_weather, snow_humid, rain, sunhour
-from extract import intro, ex
+from eda import bar_line, season_hol, corr_weather, snow_humid, rain
 from DS import model
 from ML import predict
 
