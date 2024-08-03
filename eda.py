@@ -89,8 +89,9 @@ df['DATE'] = pd.to_datetime(df['DATE'])
 df["region_code"] = np.where(df["region_code"]==24, "Centre-Val de Loire", "Hauts-de-France")
 
 # Set up a dictionary of font title
-font_title = {'color':  '#114b98',
-                'weight': 'bold'}
+font_title = {'fontfamily': 'sans-serif',
+              'color':  '#114b98',
+              'fontweight': 'bold'}
 
 # Palette for hue of season
 palette = {"Spring": "#a95aa1", "Summer": "#85c0f9",
