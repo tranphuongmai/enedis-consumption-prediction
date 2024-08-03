@@ -319,7 +319,7 @@ def snow_humid():
     
     ### Humidity ###
     df['humidity'] =  round(df['humidity'],0)
-    df['humidity'] = np.where(df['humidity'] <= 70, 'Suitbale Humidity', 'Humidity > 70%')
+    df['humidity_boo'] = np.where(df['humidity'] <= 70, 'Suitbale Humidity', 'Humidity > 70%')
 
     
 
@@ -361,8 +361,8 @@ def snow_humid():
         i=0
         for ax in axes.reshape(-1):
             cat = df['region_code'].unique()[i]
-            subset = df[df['region_code']==cat].sort_values("humidity", ascending=False)
-            sns.barplot(data=subset, y='total_consum_Mwh', x='humidity', ax=ax, errorbar=None)
+            subset = df[df['region_code']==cat].sort_values("humidity_boo", ascending=False)
+            sns.barplot(data=subset, y='total_consum_Mwh', x='humidity_boo', ax=ax, errorbar=None)
             ax.set_title('Region : {}'.format(cat), pad=8, loc='left')
             ax.set_xlabel(" ")
             ax.set_ylabel("AVG Consumption (MWh)")
