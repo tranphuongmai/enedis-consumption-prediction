@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from eda import bar_line, season_hol, corr_weather, snow_humid, rain
+from extract import intro, ex
 from DS import model
 from ML import predict
 
@@ -155,8 +156,5 @@ def main():
         st.markdown(" ")
         predict()
         
-            
-
-
-
+ 
 main()
