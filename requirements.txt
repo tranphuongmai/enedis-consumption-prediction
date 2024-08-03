@@ -6,3 +6,4 @@ plotly==5.9.0
 matplotlib==3.7.2
 seaborn==0.12.2
 numpy==2.0.1
+python==3.12.1
