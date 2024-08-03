@@ -1,4 +1,6 @@
 import streamlit as st
+import pandas as pd
+import numpy as np
 from eda import bar_line, season_hol, corr_weather, snow_humid, rain
 from DS import model
 from ML import predict
