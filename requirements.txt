@@ -2,7 +2,7 @@ pandas==2.2.2
 scikit_learn==1.5.1
 streamlit==1.37.0
 folium==0.14.0
-plotly==5.9.0
+plotly.express
 matplotlib==3.7.2
 seaborn==0.12.2
 numpy
