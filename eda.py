@@ -317,7 +317,7 @@ def snow_humid():
 
     
     ### Humidity ###
-    df['humidity'] = np.where(df['humidity'] < 71., 'Suitbale Humidity', 'Humidity > 70%')
+    df['humidity'] = np.where(df['humidity'] < 71, 'Suitbale Humidity', 'Humidity > 70%')
 
     
 
