@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import folium
-from streamlit_folium import folium_static
+from streamlit_folium import st_folium
 
 def intro():
     st.title(":violet[Regional Electricity Consumption Prediction System]")
@@ -24,7 +24,7 @@ def intro():
         popup= map.loc[ll, 'region'],
         icon=folium.Icon(color='purple', icon='fa fa-flag', prefix='fa')).add_to(m)
     
-    folium_static(m, height=500, width=700)
+    st_data = st_folium(m, height=500, width=700)
     change_font = '<p style="font-family:Corbel; color:#5d0076; font-size: 18px;">(Location of two regions in this project)</p>'
     st.markdown(change_font, unsafe_allow_html=True)
     
