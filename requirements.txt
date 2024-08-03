@@ -1,6 +1,6 @@
 pandas==2.0.3
 scikit_learn==1.5.1
-streamlit==1.32.0
+streamlit==1.37.0
 folium==0.14.0
 plotly==5.9.0
 matplotlib==3.7.2
