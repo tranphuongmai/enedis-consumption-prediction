@@ -8,4 +8,4 @@ numpy
 pandas
 matplotlib
 streamlit
-
+streamlit_folium
