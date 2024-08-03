@@ -146,7 +146,7 @@ def season_hol():
     fig, axes = plt.subplots(int(n_sub/n_col), n_col, sharex=False, sharey=False, figsize=(16,12))
     axes = np.array(axes)
 
-    fig.suptitle("Seasonal Consumption Trend by Region", fontsize = 30,  fontdict=font_title)
+    fig.suptitle("Seasonal Consumption Trend by Region", fontsize = 30)
 
     i=0
     for ax in axes.reshape(-1):
