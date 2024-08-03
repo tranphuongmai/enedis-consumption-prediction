@@ -313,7 +313,8 @@ def snow_humid():
 
     ### Snow ###
     # Create boolean value of column 'snow'
-    df["snow_str_boo"] = np.where(df["snow"] > 0., "Snow", "No Snow")
+    df['snow'] =  round(df['snow'],0)
+    df["snow_str_boo"] = np.where(df["snow"] > 0, "Snow", "No Snow")
 
     
     ### Humidity ###
