@@ -89,8 +89,7 @@ df['DATE'] = pd.to_datetime(df['DATE'])
 df["region_code"] = np.where(df["region_code"]==24, "Centre-Val de Loire", "Hauts-de-France")
 
 # Set up a dictionary of font title
-font_title = {'family': 'sans-serif',
-                'color':  '#114b98',
+font_title = {'color':  '#114b98',
                 'weight': 'bold'}
 
 # Palette for hue of season
@@ -146,7 +145,7 @@ def season_hol():
     fig, axes = plt.subplots(int(n_sub/n_col), n_col, sharex=False, sharey=False, figsize=(16,12))
     axes = np.array(axes)
 
-    fig.suptitle("Seasonal Consumption Trend by Region", fontsize = 30)
+    fig.suptitle("Seasonal Consumption Trend by Region", fontsize = 30, fontdict=font_title)
 
     i=0
     for ax in axes.reshape(-1):
