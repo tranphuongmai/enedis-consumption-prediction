@@ -354,10 +354,10 @@ def model():
     st.markdown("🔹With n_components = 12")
 
     # Get columns name of important columns by applying n_components = 11
-    pca_ncompo =  PCA(n_components=12).fit(X_train_scaled)
+    pca_ncompo_12 =  PCA(n_components=12).fit(X_train_scaled)
     
     # Create a df to identify important columns
-    pca_df = pd.DataFrame(pca_ncompo.components_, columns=X_train.columns, index=['c1', 'c2', 'c3', 'c4', 'c5', 'c6', 'c7', 'c8', 
+    pca_df = pd.DataFrame(pca_ncompo_12.components_, columns=X_train.columns, index=['c1', 'c2', 'c3', 'c4', 'c5', 'c6', 'c7', 'c8', 
                                                                                     'c9', 'c10', 'c11', 'c12'])
     st.write(pca_df)
     st.markdown('Get the most 12 variables having big variance in the datset')
@@ -381,10 +381,10 @@ def model():
     st.markdown(" ")
     st.markdown("🔹With n_components = 6")
     # Get columns name of important columns by applying n_components = 8
-    pca_ncompo =  PCA(n_components=6).fit(X_train_scaled)
+    pca_ncompo_6 =  PCA(n_components=6).fit(X_train_scaled)
     
     # Create a df to identify important columns
-    pca_df = pd.DataFrame(pca_ncompo.components_, columns=X_train.columns, index=['c1', 'c2', 'c3', 'c4', 'c5', 'c6'])
+    pca_df = pd.DataFrame(pca_ncompo_6.components_, columns=X_train.columns, index=['c1', 'c2', 'c3', 'c4', 'c5', 'c6'])
     st.write(pca_df)
     st.markdown('Get the most 6 variables having big variance in the datset')
     important_components = pca_df.abs().sum().sort_values(ascending=False)
