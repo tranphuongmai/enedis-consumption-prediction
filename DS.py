@@ -140,6 +140,10 @@ def model():
     
 
     st.header("Metrics vizualization", divider='rainbow')
+    st.markdown(" ")
+    st.markdown("After using PCA to obtain the most important features according to theirs variance contribution in the dataset, we got  8 variables: ['region_code', 'season', 'snow', 'humidity', 'PRESSURE_MAX_MB', 'wind_speed', total_precip', 'max_tem'] as input for our DecisionTreeRegressor model. But according to our analysis, we observe that 'wind_speed' and 'PRESSURE_MAX_MB' don't have much influence on electricity consumption of regions, so we tried to replace them by a time variable 'hol_weekend_vac' to see what could happen. The results that we got were very interesting. We visualized all the results (test-score and RMSE) into a barplot for easier observing.")
+    st.markdown("Thus, in the end, we selected 7 variables as input, they are:['region_code', 'season', 'hol_weekend_vac', 'humidity', 'snow',  'max_tem', 'total_precip']")
+    
     # Create df of models with theirs scores
 
     dico_models = {
@@ -150,11 +154,11 @@ def model():
                     'n_components': [24, 24, 24, 13, 13, 13, 8, 8, 8, 7, 7, 7],
                     'score_test': [0.901, 0.938, 0.945, 
                                 0.880, 0.925, 0.939, 
-                                0.877, 0.934, 0.948,
+                                0.881, 0.908, 0.944,
                                 0.876, 0.935, 0.956],
                     'RMSE (Mwh)': [4343, 3426, 3240, 
                                 4784, 3776, 3415,
-                                4838, 3535, 3141,
+                                4767, 4194, 3261,
                                 4864, 3517, 2884]
                 }
 
@@ -397,7 +401,7 @@ def model():
 
     st.write(important_components)
     st.markdown("""
-                lst_8_var = [region_code', 'season', 'hol_weekend_vac', 'snow', 'humidity', 'wind_speed', 'total_precip', 'max_tem'] 
+                lst_8_var = ['region_code', 'season', 'snow', 'humidity', 'PRESSURE_MAX_MB', 'wind_speed' 'total_precip', 'max_tem'] 
                 
                 Note: add 2 features 'total_precip' and 'max_tem'
                 """)
