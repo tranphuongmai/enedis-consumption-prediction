@@ -138,7 +138,7 @@ def predict():
     
 
     a = st.chat_message("assistant")
-    a.write("...... 🤖, Please be pation for few second. I'm working on the prediction.")
+    a.write("...... 🤖, Please be patient for a few seconds. I'm working on the prediction.")
     a.write("...... ")
     a.write("...... ")
     a.write("According to your provied indicators, the Regional Electricity Consumption will be:")
