@@ -506,7 +506,7 @@ def model():
     st.write('\nRMSE :', np.sqrt(metrics.mean_squared_error(y_test, y_test_predict)), 'Mwh')
 
     st.header("Metrics using 7 features", divider='rainbow')
-    st.markdown("Following our weather influence analysis, we noticed that the feature 'wind_speed' does not have much impact on regional electricity consumption so we chose to remove this variable.")
+    st.markdown("Following our weather influence analysis, we noticed that the duo features 'wind_speed' and 'PRESSURE_MAX_MB' do not have much impact on regional electricity consumption so we chose to remove these variables.")
     st.markdown(" ")
     ### Round 4: 7 variables ###
 
