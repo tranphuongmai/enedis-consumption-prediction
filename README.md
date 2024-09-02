@@ -23,10 +23,10 @@ After the first model using DecisionTreeRegressor, I also trained another one re
 ## About the dataset
 
 - 2 datasets about total electricity consumption every half hour of 2 regions from 4/2022 to 3/2024, which provides me condensed and macro information of the regional electricity consumption.
-  ![enedis](https://data.enedis.fr/explore/dataset/conso-inf36-region/information/)
+  [Enedis](https://data.enedis.fr/explore/dataset/conso-inf36-region/information/)
   
 - 33 datasets about the weather indicators of 11 departments in 2 regions.
-  ![Historique-Météo](https://www.historique-meteo.net/)
+  [Historique-Météo](https://www.historique-meteo.net/)
 
 
 ## Explaining step by step
@@ -48,7 +48,7 @@ This session is to explain our ML workflow and how did I filter all the variable
     Explanatory variables are all the columns except of 'DATE' and target column
   
 - ML Pipline:
-  ![workflow](asset/pipline.png)
+  ![workflow](asset/pipeline.png)
 
 - Machine Learning workflow step by step:
   0. Extract and preprocess data
@@ -69,5 +69,5 @@ This session is to explain our ML workflow and how did I filter all the variable
 
 
 ## Visit the application on Streamlit
-![streamlit](https://enedis-consumption-prediction.streamlit.app/)
+[Streamlit App](https://enedis-consumption-prediction.streamlit.app/)
 
