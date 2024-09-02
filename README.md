@@ -50,7 +50,7 @@ This session is to explain our ML workflow and how did I filter all the variable
 - ML Pipline:
   ![workflow](asset/pipeline.png)
 
-- Machine Learning workflow step by step:
+- Machine Learning workflow step by step: 
   0. Extract and preprocess data
   1. Initialze X (explanatory variables), y (target variable)
   2. Split train, test then standardize X_train, X_test
